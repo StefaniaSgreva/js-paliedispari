@@ -3,7 +3,8 @@
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma*/
 
-
+const btn = document.querySelector('.btnWord');
+let userWord = document.getElementById('palindrome');
 
 
 
