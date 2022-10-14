@@ -1,22 +1,25 @@
 "use strict"; 
+const container = document.querySelector('.wrapper');
+
 /*Palidroma:
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma*/
 
-const btn = document.querySelector('.btnWord');
-let userWord = document.getElementById('palindrome');
+const btnPal = document.querySelector('.btnWord');
+const result = document.querySelector('h4');
 
 
-
-
-
-
-
-
-
-
-
-
+btnPal.addEventListener('click', function(){
+    let userWord = document.getElementById('palindrome').value;  
+    let reversedWord = userWord.split('').reverse().join('');
+    console.log(reversedWord);
+    if (reversedWord === userWord){
+        result.innerHTML = 'This word is a palindrome !'; 
+    }else{
+    
+        result.innerHTML = 'This word is not a palindrome !';
+    }
+});
 
 
 
