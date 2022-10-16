@@ -51,9 +51,9 @@ btnEO.addEventListener('click', function(){
         // result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${sum()}`;
         const Sum = sum();
         if(isEven(Sum) && (evenNum)){ 
-            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is even. You wpn !`;
+            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is even. You won !`;
         } else if (!isEven(Sum) && (oddNum)){
-            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is odd. You win !`;
+            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is odd. You won !`;
         } else {
             result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} You lost, try again !`;
         }
