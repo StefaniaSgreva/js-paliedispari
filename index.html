@@ -12,22 +12,35 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- My JS Library -->
     <script src="./JS/myLibrary.js"></script>
     <title>Paliedispari</title>
 </head>
 <body class="bg-body">
     <div class="wrapper">
+        <!-- ES 1 PALINDROME  -->
         <div class="ex1">
             <h2 class="mb-4">Is this word a palindrome? Check it out below:</h2>
             <input id="palindrome" type="text" placeholder="enter a word">
             <button class="btnWord px-1 ms-2">check</button>
-            <h4 class="mt-4"></h4>
+            <h4 class="mt-4 result1"></h4>
         </div>
-
+        <!-- ES 2 EVENS OR ODDS  -->
         <div class="ex2 mt-5">
             <h2 class="mb-4">Play Odds and Evens</h2>
-
+            <div class="mb-4">Make your choice between odd or even and play a number from 1 to 5<br>Then press the button and see who will win between you and the computer</div>
+            <div class="container">
+                <label for="even">Even</label>
+                <input type="number" min="1" max="5" id="numberEven">
+                <label for="odd"  class="ms-5">Odd</label>
+                <input type="number" min="1" max="5" id="numberOdd">
+            </div>
+            <div class="containerAlert mt-3">
+                <button class="btnNumber px-1 mt-4">Evens or Odds ?</button>
+                <h4 class="mt-4 result2"></h4>
+            </div>
             
         </div>
 
