@@ -37,19 +37,25 @@ const container = document.querySelector('.containerAlert');
 btnEO.addEventListener('click', function(){
     const validNumbers = [1, 2, 3, 4, 5];
     let value = parseInt(inputTagEven.value) || parseInt(inputTagOdd.value); //Element to be searched
+    let evenNum = parseInt(inputTagEven.value);
+    let oddNum = parseInt(inputTagOdd.value);
+    let computerValue = randomNumber(1, 5);
     if(validNumbers.includes(value)){
 
         function sum(){
-            const firstNumber = parseInt(inputTagEven.value) || parseInt(inputTagOdd.value);
-            const secondNumber = randomNumber(1, 5);
-            return firstNumber + secondNumber;
+            const firstNumber = value;
+            const secondNumber = computerValue;
+            return firstNumber + secondNumber
           }
-          console.log(sum());
-
-        if(isEven(sum)){ //!isEven
-            result2.innerHTML = sum() + 'even';
+          console.log(value, computerValue, sum());
+        // result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${sum()}`;
+        const Sum = sum();
+        if(isEven(Sum) && (evenNum)){ 
+            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is even. You wpn !`;
+        } else if (!isEven(Sum) && (oddNum)){
+            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} is odd. You win !`;
         } else {
-            result2.innerHTML = sum() + 'odd';
+            result2.innerHTML = `Your number: ${value} + Computer number: ${computerValue} = ${Sum} You lost, try again !`;
         }
 
     } else{
@@ -60,4 +66,7 @@ btnEO.addEventListener('click', function(){
     }
     const attentionToRemove = document.querySelector('.alert');
     if(attentionToRemove) attentionToRemove.remove(); 
+
+    inputTagEven.value = '';
+    inputTagOdd.value = '';
 });
